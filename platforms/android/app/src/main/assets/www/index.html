@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>Media App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="views">
+        <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center sliding">Tap Play to get magic</div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pages navbar-through toolbar-through">
+                <div data-page="index" class="page md">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <audio id="myMusic">
+                                <source src="lib/media/MyHeaven-BigBang.mp3"></source>
+                            </audio>
+                            <div class="row">
+                                <div class="col-33"><a href="" class="button" id="btnPlay">PLay</a></div>
+                                <div class="col-33"><a href="" class="button" id="btnPause">Pause</a></div>
+                                <div class="col-33"><a href="" class="button" id="btnStop">Stop</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-100">
+                                    <input id="rngVolume" value="0.5" type="range" min="0" max="1" step="0.1">
+                                    <p><span id="position"></span><span id="duration"></span></p>
+                                </div>
+                            </div>
+                            <h2>Media Capture</h2>
+                            <div class="row">
+                                <div class="col-33" id="">
+                                    <a href="" class="button" id="btnCaptureImage">Image</a>
+                                </div>
+                                <div class="col-33" id="">
+                                    <a href="" class="button" id="btnCaptureAudio">Audio</a>
+                                </div>
+                                <div class="col-33" id=""><a href="" class="button" id="btnCaptureVideo">Video</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-100" id="captureResult">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

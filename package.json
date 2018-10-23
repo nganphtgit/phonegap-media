@@ -1,0 +1,26 @@
+{
+  "name": "com.julie.phonegap",
+  "version": "1.0.0",
+  "displayName": "Media",
+  "cordova": {
+    "platforms": [
+      "browser",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-media": {},
+      "cordova-plugin-media-capture": {}
+    }
+  },
+  "dependencies": {
+    "cordova-browser": "~5.0.4",
+    "cordova-plugin-whitelist": "~1.2.0",
+    "cordova-plugin-console": "~1.0.1",
+    "cordova-plugin-statusbar": "~1.0.1",
+    "cordova-plugin-media": "https://github.com/apache/cordova-plugin-media",
+    "cordova-plugin-media-capture": "https://github.com/apache/cordova-plugin-media-capture"
+  }
+}
